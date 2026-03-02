@@ -1,3 +1,5 @@
+
+/*-------------------Box Sizing----------*/
 html{
     box-sizing: border-box;
 }
@@ -6,6 +8,8 @@ html{
 *::after {
 box-sizing: inherit;
 }
+/*-------------------Utility Classes----------*/
+
 .visually-hidden {
     border: 0;
     clip: rect(0, 0, 0, 0);
@@ -16,6 +20,8 @@ box-sizing: inherit;
     white-space: nowrap;
     width: 1px;
 }
+/*make skip link visible when keybard users tab to it*/
+
 .visually-hidden {
   border: 0;
   clip: rect(0, 0, 0, 0);
@@ -27,9 +33,19 @@ box-sizing: inherit;
   white-space: nowrap;
   width: 1px;
 }
+/*-------------------Box Sizing----------*/
+
 body{
 font-family: "Iceberg", sans-serif; 
 }
 header.primary{
     background-color: #3b6b8b;
+    color:#ffffff;
+    text-align: center;
+    text-shadow: 2px 2px #000000;
+}
+
+
+header.primary a{
+    color:#ffffff
 }
