@@ -58,3 +58,14 @@ header.primary a{
     color:#ffffff;
     text-decoration:none;
 }
+
+nav.primary ul{
+    padding: 0;
+    background: green;
+}
+
+nav.primary ul li{
+    list-style-type: none;
+    background: red;
+    margin: 10px;
+}
