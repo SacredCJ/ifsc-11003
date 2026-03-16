@@ -132,14 +132,69 @@ nav.primary ul li a:hover {
     flex-direction: row;
     justify-content: space-between;
     gap:20px;
+    flex-wrap: wrap;
 }
 figure{
     margin:0;
 }
+#blog article.post{
+  box-shadow: 0px 0px 10px 9px rgba(85,255,210,0.41);
+  padding:10px;
+  font-size: .8rem;
+  flex: 1;
+}
+
+article.post time, article.post figcaption{
+text-transform: uppercase;
+font-size: .6rem;
+}
+
+article.post a{
+  color:aquamarine;
+}
 
 
+aside[aria-label="sidebar"]{
+  background-color:#046344;
+  padding: 40px 0;
+  color:#ffffff;
+}
 
+aside .container{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
 
+aside .container a{
+  color:#ffffff;
+ 
+}
+
+aside .container a:last-child{
+ display:block;
+  text-align: right;
+  margin-top: 20px;
+}
+aside footer{
+  display:none;
+}
+
+aside .widget{
+  flex:1;
+}
+
+footer.primary{
+  color:rgba(63, 242, 196, 0.8);
+  padding: 5px;
+  color:#ffffff;
+  text-align: center;
+  text-shadow: 1px 1px
+  #000000;
+}
+h2#recent-posts{
+  flex:0 0 100%
+}
 /* Media Queries*/
 
 @media screen and (max-width:600px){
