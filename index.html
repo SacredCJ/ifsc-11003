@@ -6,32 +6,290 @@
   <title>IFSC 1310 | Charles Johnson</title>
   <meta name="description" content="IFSC 1310 course homepage and project links">
   <meta name="author" content="Charles Johnson">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;800&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    html {
+      box-sizing: border-box;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: inherit;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "Rajdhani", sans-serif;
+      color: #eef6ff;
+      background:
+        radial-gradient(circle at top, rgba(57, 174, 255, 0.18), transparent 24%),
+        radial-gradient(circle at 80% 20%, rgba(0, 255, 179, 0.10), transparent 18%),
+        linear-gradient(180deg, #07111b 0%, #0b1724 40%, #09131d 100%);
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background:
+        linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+      background-size: 34px 34px;
+      pointer-events: none;
+      opacity: 0.35;
+    }
+
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(circle at 10% 20%, rgba(57, 174, 255, 0.14), transparent 10%),
+        radial-gradient(circle at 85% 80%, rgba(0, 255, 179, 0.10), transparent 12%);
+      filter: blur(30px);
+      pointer-events: none;
+    }
+
+    .page-shell {
+      position: relative;
+      z-index: 1;
+      width: min(1100px, 92vw);
+      margin: 0 auto;
+      padding: 48px 0 64px;
+    }
+
+    .hero {
+      border: 1px solid rgba(103, 197, 255, 0.35);
+      background: linear-gradient(180deg, rgba(8, 18, 29, 0.92), rgba(10, 22, 35, 0.82));
+      border-radius: 18px;
+      padding: 32px 28px;
+      box-shadow:
+        0 0 0 1px rgba(255, 255, 255, 0.03) inset,
+        0 0 30px rgba(34, 144, 255, 0.18);
+      margin-bottom: 28px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(120deg, transparent 0%, rgba(95, 214, 255, 0.08) 40%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .eyebrow {
+      margin: 0 0 8px;
+      font-size: 0.95rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #79d3ff;
+      font-weight: 700;
+    }
+
+    h1 {
+      margin: 0;
+      font-family: "Orbitron", sans-serif;
+      font-size: clamp(2.2rem, 6vw, 4rem);
+      line-height: 1;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #f5fbff;
+      text-shadow: 0 0 18px rgba(121, 211, 255, 0.24);
+    }
+
+    .hero p {
+      max-width: 700px;
+      margin: 16px 0 0;
+      font-size: 1.2rem;
+      color: #c7d9e8;
+      line-height: 1.5;
+    }
+
+    .panel {
+      border: 1px solid rgba(103, 197, 255, 0.24);
+      background: linear-gradient(180deg, rgba(8, 18, 29, 0.9), rgba(9, 17, 28, 0.78));
+      border-radius: 18px;
+      padding: 24px;
+      box-shadow: 0 0 24px rgba(34, 144, 255, 0.12);
+    }
+
+    .panel-title {
+      margin: 0 0 18px;
+      font-family: "Orbitron", sans-serif;
+      font-size: 1.25rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #88dbff;
+    }
+
+    .project-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 18px;
+    }
+
+    .project-card {
+      border: 1px solid rgba(103, 197, 255, 0.22);
+      background: linear-gradient(180deg, rgba(10, 24, 38, 0.95), rgba(8, 18, 29, 0.9));
+      border-radius: 16px;
+      padding: 18px;
+      transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.02);
+    }
+
+    .project-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(114, 226, 255, 0.55);
+      box-shadow:
+        0 0 20px rgba(57, 174, 255, 0.14),
+        0 0 34px rgba(0, 255, 179, 0.08);
+    }
+
+    .card-label {
+      display: inline-block;
+      margin-bottom: 10px;
+      padding: 5px 10px;
+      border-radius: 999px;
+      background: rgba(0, 255, 179, 0.10);
+      border: 1px solid rgba(0, 255, 179, 0.22);
+      color: #89ffe0;
+      text-transform: uppercase;
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    .project-card h2 {
+      margin: 0 0 10px;
+      font-family: "Orbitron", sans-serif;
+      font-size: 1.1rem;
+      color: #f4fbff;
+      letter-spacing: 1px;
+    }
+
+    .project-card p {
+      margin: 0 0 16px;
+      font-size: 1.05rem;
+      line-height: 1.45;
+      color: #c7d9e8;
+    }
+
+    .project-card a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 160px;
+      padding: 11px 14px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1rem;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      color: #06111b;
+      background: linear-gradient(135deg, #8de8ff, #54bfff);
+      box-shadow: 0 0 18px rgba(84, 191, 255, 0.26);
+      transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+    }
+
+    .project-card a:hover {
+      transform: translateY(-2px);
+      filter: brightness(1.05);
+      box-shadow: 0 0 24px rgba(84, 191, 255, 0.34);
+    }
+
+    .footer-note {
+      margin-top: 22px;
+      text-align: center;
+      color: #92a8bc;
+      font-size: 1rem;
+      letter-spacing: 0.5px;
+    }
+
+    @media (max-width: 700px) {
+      .page-shell {
+        padding-top: 26px;
+      }
+
+      .hero,
+      .panel {
+        padding: 20px;
+      }
+
+      .hero p {
+        font-size: 1.05rem;
+      }
+    }
+  </style>
 </head>
 
 <body>
+  <div class="page-shell">
+    <header class="hero">
+      <p class="eyebrow">Field Access Terminal</p>
+      <h1>Charles Johnson</h1>
+      <p>
+        Welcome to my IFSC 1310 project hub. This page is my main access point for course work, class projects, and assignment submissions.
+      </p>
+    </header>
 
-  <h1>Charles Johnson</h1>
+    <main class="panel">
+      <h2 class="panel-title">Project Links</h2>
 
-<ul>
-  <li>
-    <a href="Projects/prototype.html" title="Prototype HTML5 Assignment Submission">
-      View My Prototype Project
-    </a>
-  </li>
+      <ul class="project-list">
+        <li class="project-card">
+          <span class="card-label">Project 01</span>
+          <h2>Prototype Project</h2>
+          <p>
+            My HTML5 prototype assignment, focuses on basic page structure, semantic markup, and building a clean foundation for a website.
+          </p>
+          <a href="Projects/prototype.html" title="Prototype HTML5 Assignment Submission">
+            Open Project
+          </a>
+        </li>
 
-  <li>
-    <a href="cssdemo/index.html" title="CSS Demo Index Page">
-      View CSS Demo
-    </a>
-  </li>
+        <li class="project-card">
+          <span class="card-label">Project 02</span>
+          <h2>CSS Demo</h2>
+          <p>
+            CSS Demo assignment, worked on in class and outsite, used to show learning concepts of CSS coding. Added Javascript based on the idea I wanted to have an animated background because I thought it would be fun, was infact not fun to learn how to do.
+          </p>
+          <a href="cssdemo/index.html" title="CSS Demo Index Page">
+            Open Project
+          </a>
+        </li>
 
-  <li>
-    <a href="Projects/assets/images/Froggy.png" title="Flexbox Froggy Level 24 Completion Screenshot">
-      View Flexbox Froggy Level 24 Screenshot
-    </a>
-  </li>
-</ul>
+        <li class="project-card">
+          <span class="card-label">Assignment 03</span>
+          <h2>Flexbox Froggy Screenshot</h2>
+          <p>
+            My completed Flexbox Froggy screenshot.
+          </p>
+          <a href="Projects/assets/images/Froggy.png" title="Flexbox Froggy Level 24 Completion Screenshot">
+            View Screenshot
+          </a>
+        </li>
+      </ul>
 
+      <p class="footer-note">
+        My IFSC 1310 repository homepage for Project & Assignment navigation
+      </p>
+    </main>
+  </div>
 </body>
 
 </html>

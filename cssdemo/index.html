@@ -20,20 +20,7 @@
 <body>
   <a class="visually-hidden" href="#main-content">Skip to main content</a>
 
-  <!-- Body -->
   <header class="primary">
-    <!-- Particles -->
-    <span class="particle" data-speed="0.030"></span>
-    <span class="particle" data-speed="0.025"></span>
-    <span class="particle" data-speed="0.020"></span>
-    <span class="particle" data-speed="0.035"></span>
-    <span class="particle" data-speed="0.028"></span>
-    <span class="particle" data-speed="0.024"></span>
-    <span class="particle" data-speed="0.032"></span>
-    <span class="particle" data-speed="0.026"></span>
-    <span class="particle" data-speed="0.021"></span>
-    <span class="particle" data-speed="0.029"></span>
-
     <h1><a href="index.html">Building the Modern Web</a></h1>
     <p class="subtitle">HTML5, CSS, JavaScript Fundamentals</p>
     <nav class="primary container" aria-label="Primary">
@@ -45,7 +32,6 @@
     </nav>
   </header>
 
-  <!-- Main -->
   <main id="main-content" class="container">
 
     <section id="content">
@@ -238,78 +224,45 @@ Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea placeat porro esse 
 </section>
   </main>
 
-  <aside aria-label="sidebar">
-    <!-- Particles -->
-    <span class="particle" data-speed="0.030"></span>
-    <span class="particle" data-speed="0.022"></span>
-    <span class="particle" data-speed="0.027"></span>
-    <span class="particle" data-speed="0.034"></span>
-    <span class="particle" data-speed="0.024"></span>
-    <span class="particle" data-speed="0.029"></span>
-    <span class="particle" data-speed="0.021"></span>
-    <span class="particle" data-speed="0.033"></span>
-    <span class="particle" data-speed="0.025"></span>
-    <span class="particle" data-speed="0.028"></span>
+  <section class="lower-panel">
+    <aside aria-label="sidebar">
+      <div class="container">
 
-    <div class="container">
+        <article class="widget">
+          <header>
+            <h2>Sample Sidebar Item</h2>
+          </header>
 
-      <article class="widget">
-        <header>
-          <h2>Sample Sidebar Item</h2>
-        </header>
+          <p>
+            Quisque justo erat, <a href="#"> place holder </a>varius placerat fermentum vel, iaculis vel ligula...
+            <a href="#">Read More &raquo;</a>
+          </p>
 
-        <p>
-          Quisque justo erat, <a href="#"> place holder </a>varius placerat fermentum vel, iaculis vel ligula...
-          <a href="#">Read More &raquo;</a>
-        </p>
+          <footer>Widget Footer</footer>
+        </article>
 
-        <footer>Widget Footer</footer>
-      </article>
+        <article class="widget">
+          <header>
+            <h2>Sample Sidebar Item</h2>
+          </header>
 
-      <article class="widget">
-        <header>
-          <h2>Sample Sidebar Item</h2>
-        </header>
+          <p>
+            Quisque justo erat, varius placerat fermentum vel, iaculis vel ligula...
+            <a href="#">Read More &raquo;</a>
+          </p>
 
-        <p>
-          Quisque justo erat, varius placerat fermentum vel, iaculis vel ligula...
-          <a href="#">Read More &raquo;</a>
-        </p>
+          <footer>Widget Footer</footer>
+        </article>
 
-        <footer>Widget Footer</footer>
-      </article>
+      </div>
+    </aside>
 
-    </div>
-  </aside>
+    <footer class="primary">
+      <p>&copy; 2026 Charles Johnson</p>
+    </footer>
+  </section>
 
-  <footer class="primary">
-    <!-- Particles -->
-    <span class="particle" data-speed="0.020"></span>
-    <span class="particle" data-speed="0.024"></span>
-    <span class="particle" data-speed="0.030"></span>
-    <span class="particle" data-speed="0.026"></span>
-    <span class="particle" data-speed="0.022"></span>
-    <span class="particle" data-speed="0.028"></span>
-
-    <p>&copy; 2026 Charles Johnson</p>
-  </footer>
-
-  <script>
-    const particles = document.querySelectorAll('.particle');
-
-    document.addEventListener('mousemove', function (e) {
-      const mouseX = e.clientX / window.innerWidth - 0.5;
-      const mouseY = e.clientY / window.innerHeight - 0.5;
-
-      particles.forEach(function (particle) {
-        const speed = parseFloat(particle.dataset.speed) || 0.02;
-        const moveX = mouseX * 40 * speed * 10;
-        const moveY = mouseY * 40 * speed * 10;
-        particle.style.setProperty('--moveX', moveX + 'px');
-        particle.style.setProperty('--moveY', moveY + 'px');
-      });
-    });
-  </script>
+  <script src="assets/js/script.js"></script>
 
 </body>
 
