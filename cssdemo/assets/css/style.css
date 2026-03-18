@@ -1,4 +1,4 @@
-/*-------------------Box Sizing----------*/
+/*--------Box Sizing--------*/
 html {
   box-sizing: border-box;
 }
@@ -9,12 +9,12 @@ html {
   box-sizing: inherit;
 }
 
-/*-------------------Responsive Images----------*/
+/*--------Responsive Images--------*/
 img {
   max-width: 100%;
 }
 
-/*-------------------Utility Classes----------*/
+/*--------Utility Classes--------*/
 .container {
   max-width: 1100px;
   width: 86vw;
@@ -33,25 +33,27 @@ img {
   width: 1px;
 }
 
-.img-right{
+.img-right {
   float: right;
-  margin: 10px 0px 10px 20px;
+  margin: 10px 0 10px 20px;
   border: 2px solid #f6c445;
   padding: 10px;
   max-width: 25%;
   background: rgba(7, 13, 24, 0.75);
   box-shadow: 0 0 14px rgba(246, 196, 69, 0.15);
 }
-.img-left{
+
+.img-left {
   float: left;
-  margin: 10px 20px 10px 0px;
+  margin: 10px 20px 10px 0;
   border: 2px solid #f6c445;
   padding: 10px;
   max-width: 25%;
   background: rgba(7, 13, 24, 0.75);
   box-shadow: 0 0 14px rgba(246, 196, 69, 0.15);
 }
-.img-center{
+
+.img-center {
   display: block;
   margin: 20px auto;
   border: 2px solid #f6c445;
@@ -61,7 +63,7 @@ img {
   box-shadow: 0 0 14px rgba(246, 196, 69, 0.15);
 }
 
-/* make skip link visible when keyboard users tab to it */
+/*--------Skip Link--------*/
 .visually-hidden:focus,
 .visually-hidden:focus-visible {
   clip: auto;
@@ -78,7 +80,7 @@ img {
   border-radius: 6px;
 }
 
-/*-------------------Global Styles----------*/
+/*--------Global Styles--------*/
 body {
   font-family: "Iceberg", sans-serif;
   margin: 0;
@@ -174,7 +176,7 @@ main.container {
 }
 
 #content h2,
-#practice h2{
+#practice h2 {
   color: #f6c445;
   border-bottom: 2px solid rgba(246, 196, 69, 0.72);
   text-transform: uppercase;
@@ -230,16 +232,16 @@ article.post h3 a:hover {
   color: #d7e1ef;
 }
 
-#practice a{
+#practice a {
   color: #f9d76e;
 }
 
-#practice a:hover{
+#practice a:hover {
   text-decoration: none;
   color: #ffffff;
 }
 
-#practice h3{
+#practice h3 {
   border-left: 7.5px solid #f6c445;
   padding: 10px 0 10px 12px;
   color: #f9d76e;
@@ -251,29 +253,33 @@ h4 {
   color: #f6c445;
 }
 
-/* Table */
-table{
-  width:100%;
+/*--------Table--------*/
+table {
+  width: 100%;
   border: 2px solid rgba(246, 196, 69, 0.65);
   border-collapse: collapse;
   background: rgba(9, 14, 22, 0.78);
 }
-caption{
+
+caption {
   font-weight: bold;
   margin: 10px;
   color: #f9d76e;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
-td{
+
+td {
   border: 1px solid rgba(246, 196, 69, 0.34);
   padding: 5px;
   color: #edf3ff;
 }
-td:nth-child(n+2){
-  text-align:center;
+
+td:nth-child(n + 2) {
+  text-align: center;
 }
-th{
+
+th {
   border: 1px solid rgba(246, 196, 69, 0.7);
   background: linear-gradient(180deg, #f6c445, #d8a92c);
   color: #111926;
@@ -281,13 +287,16 @@ th{
   text-transform: uppercase;
   letter-spacing: 1px;
 }
-tr:nth-child(even){
+
+tr:nth-child(even) {
   background-color: rgba(255, 255, 255, 0.05);
 }
-tr:hover{
+
+tr:hover {
   background-color: rgba(246, 196, 69, 0.12);
 }
 
+/*--------Blockquote--------*/
 blockquote {
   border-left: 5px solid #ff6934;
   padding: 12px 16px;
@@ -296,6 +305,7 @@ blockquote {
   color: #eef4ff;
 }
 
+/*--------Lower Panel--------*/
 .lower-panel {
   position: relative;
   overflow: hidden;
@@ -306,9 +316,8 @@ blockquote {
   box-shadow: 0 0 20px rgba(246, 196, 69, 0.08);
 }
 
-/* ------Lists------- */
-
-#practice ol{
+/*--------Lists--------*/
+#practice ol {
   counter-reset: step;
   list-style: none;
   padding-left: 0;
@@ -343,8 +352,7 @@ blockquote {
   box-shadow: 0 0 10px rgba(246, 196, 69, 0.4);
 }
 
-
-/* Main grocery list */
+/*--------Main List--------*/
 #practice > ul > li {
   background: rgba(8, 18, 30, 0.75);
   border: 1px solid rgba(121, 211, 255, 0.2);
@@ -353,6 +361,7 @@ blockquote {
   margin: 8px 0;
   position: relative;
 }
+
 #practice ul {
   max-width: 500px;
   margin: 20px auto;
@@ -363,7 +372,8 @@ blockquote {
   margin: 8px 0;
   padding: 10px 14px 10px 28px;
 }
-/* Main bullet */
+
+/*--------Main Bullet--------*/
 #practice > ul > li::before {
   content: "■";
   position: absolute;
@@ -371,13 +381,13 @@ blockquote {
   color: #79d3ff;
 }
 
-/* Nested list */
+/*--------Nested List--------*/
 #practice ul ul {
   margin-top: 8px;
   padding-left: 10px;
 }
 
-/* Nested items */
+/*--------Nested Items--------*/
 #practice ul ul li {
   background: rgba(255, 255, 255, 0.05);
   border-left: 3px solid #f6c445;
@@ -386,7 +396,7 @@ blockquote {
   font-size: 0.9rem;
 }
 
-/* Nested bullet */
+/*--------Nested Bullet--------*/
 #practice ul ul li::before {
   content: "→";
   left: 6px;
@@ -394,8 +404,7 @@ blockquote {
   position: absolute;
 }
 
-
-/* Definition List */
+/*--------Definition List--------*/
 #practice dl {
   margin: 20px 0;
   padding: 16px;
@@ -419,6 +428,7 @@ blockquote {
   color: #d7e1ef;
 }
 
+/*--------Sidebar--------*/
 aside[aria-label="sidebar"] {
   position: relative;
   overflow: visible;
@@ -464,6 +474,7 @@ aside .widget h2 {
   letter-spacing: 1px;
 }
 
+/*--------Footer--------*/
 footer.primary {
   position: relative;
   overflow: visible;
@@ -488,7 +499,7 @@ h2#recent-posts {
   flex: 0 0 100%;
 }
 
-/*-------------------Star Particles----------*/
+/*--------Star Particles--------*/
 .particle {
   position: absolute;
   left: 0;
@@ -541,7 +552,7 @@ h2#recent-posts {
   }
 }
 
-/*-------------------Media Queries----------*/
+/*--------Media Queries--------*/
 @media screen and (max-width: 600px) {
   .container {
     width: 95vw;

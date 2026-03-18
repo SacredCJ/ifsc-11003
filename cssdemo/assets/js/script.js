@@ -1,4 +1,7 @@
+/*--------DOM Ready--------*/
 document.addEventListener("DOMContentLoaded", function () {
+
+  /*--------Sections Setup--------*/
   const sections = [
     {
       element: document.querySelector("header.primary"),
@@ -14,13 +17,16 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   ];
 
+  /*--------State--------*/
   const stars = [];
+
   const mouse = {
     x: -9999,
     y: -9999,
     active: false
   };
 
+  /*--------Helpers--------*/
   function randomBetween(min, max) {
     return Math.random() * (max - min) + min;
   }
@@ -31,7 +37,9 @@ document.addEventListener("DOMContentLoaded", function () {
     }).length;
   }
 
+  /*--------Create Star--------*/
   function createStar(section, initialSpawn = false) {
+
     if (!section.element) return null;
     if (countStarsInSection(section.element) >= section.maxStars) return null;
 
@@ -53,6 +61,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let vx = 0;
     let vy = 0;
 
+    /*--------Spawn Logic--------*/
     if (initialSpawn) {
       x = randomBetween(12, Math.max(20, rect.width - 12));
       y = randomBetween(12, Math.max(20, rect.height - 12));
@@ -98,7 +107,9 @@ document.addEventListener("DOMContentLoaded", function () {
     return newStar;
   }
 
+  /*--------Initial Spawn--------*/
   sections.forEach(function (section) {
+
     for (let i = 0; i < section.startStars; i++) {
       createStar(section, true);
     }
@@ -108,6 +119,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }, section.spawnEvery);
   });
 
+  /*--------Mouse Tracking--------*/
   document.addEventListener("mousemove", function (event) {
     mouse.x = event.clientX;
     mouse.y = event.clientY;
@@ -120,13 +132,17 @@ document.addEventListener("DOMContentLoaded", function () {
     mouse.y = -9999;
   });
 
+  /*--------Animation Loop--------*/
   function animate() {
+
     stars.forEach(function (star) {
+
       const rect = star.parent.getBoundingClientRect();
 
       const starScreenX = rect.left + star.x;
       const starScreenY = rect.top + star.y;
 
+      /*--------Mouse Repel--------*/
       if (mouse.active) {
         const dx = starScreenX - mouse.x;
         const dy = starScreenY - mouse.y;
@@ -140,6 +156,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       }
 
+      /*--------Drift Logic--------*/
       star.driftTimer -= 1;
 
       if (star.driftTimer <= 0) {
@@ -148,6 +165,7 @@ document.addEventListener("DOMContentLoaded", function () {
         star.driftTimer = randomBetween(20, 80);
       }
 
+      /*--------Speed Clamp--------*/
       const maxSpeed = 1.45;
 
       if (star.vx > maxSpeed) star.vx = maxSpeed;
@@ -155,12 +173,14 @@ document.addEventListener("DOMContentLoaded", function () {
       if (star.vy > maxSpeed) star.vy = maxSpeed;
       if (star.vy < -maxSpeed) star.vy = -maxSpeed;
 
+      /*--------Movement--------*/
       star.x += star.vx;
       star.y += star.vy;
 
       star.vx *= 0.996;
       star.vy *= 0.996;
 
+      /*--------Bounds--------*/
       const padding = 8;
 
       if (star.x <= padding) {
@@ -189,8 +209,11 @@ document.addEventListener("DOMContentLoaded", function () {
     requestAnimationFrame(animate);
   }
 
+  /*--------Resize Fix--------*/
   window.addEventListener("resize", function () {
+
     stars.forEach(function (star) {
+
       const rect = star.parent.getBoundingClientRect();
 
       if (star.x > rect.width - 10) {
@@ -203,5 +226,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
+  /*--------Start Animation--------*/
   animate();
 });
