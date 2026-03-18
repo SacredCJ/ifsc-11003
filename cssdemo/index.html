@@ -4,22 +4,36 @@
 <html lang="en">
 
 <head>
+  
   <title>IFSC 11003 - Prototype</title>
   <meta charset="UTF-8" />
   <meta name="description" content="Keyword rich narrative on site purpose" />
   <meta name="author" content="Student Name" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- Style Sheet -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Iceberg&display=swap" rel="stylesheet">
-<link href="assets/css/style.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Iceberg&display=swap" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet" />
 </head>
 
 <body>
   <a class="visually-hidden" href="#main-content">Skip to main content</a>
+
+  <!-- Body -->
   <header class="primary">
+    <!-- Particles -->
+    <span class="particle" data-speed="0.030"></span>
+    <span class="particle" data-speed="0.025"></span>
+    <span class="particle" data-speed="0.020"></span>
+    <span class="particle" data-speed="0.035"></span>
+    <span class="particle" data-speed="0.028"></span>
+    <span class="particle" data-speed="0.024"></span>
+    <span class="particle" data-speed="0.032"></span>
+    <span class="particle" data-speed="0.026"></span>
+    <span class="particle" data-speed="0.021"></span>
+    <span class="particle" data-speed="0.029"></span>
+
     <h1><a href="index.html">Building the Modern Web</a></h1>
     <p class="subtitle">HTML5, CSS, JavaScript Fundamentals</p>
     <nav class="primary container" aria-label="Primary">
@@ -31,7 +45,7 @@
     </nav>
   </header>
 
-  <!-- Main landmark gives you a clean selector target for weeks 6–9 -->
+  <!-- Main -->
   <main id="main-content" class="container">
 
     <section id="content">
@@ -108,9 +122,135 @@ Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea placeat porro esse 
       </article>
 
     </section>
+<section id="practice">
+  <h2>Properly Marking up an HTML Document</h2>
+  <!--(Primary Content Heading)-->
 
+  <p>This is a paragraph. <em>Often times designers</em> will use <q>Dummy Text</q> as a <strong>placeholder</strong> in a document. An example of that text follows...Lorem ipsum dolor sit amet, consectetuer <del>adipiscing elit</del>. Praesent volutpat
+    velit sed massa. In volutpat eros sagittis ipsum. Donec fringilla risus nec nunc. Fusce tellus arcu, blandit quis, posuere in, porta vitae, lorem.</p>
+<p> <img src="https://thomaswallace.net/wp-content/uploads/2018/02/ualr.png" alt="UA Little Rock Logo" class="img-right" />Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Mauris volutpat. Integer dignissim consequat enim. Praesent velit felis,
+    tempus malesuada, sagittis et, condimentum in, ante. Nulla lobortis, ligula sit amet laoreet sollicitudin, sem arcu lacinia tellus, id lobortis arcu urna tincidunt turpis. <sup><a href="#">1</a></sup> </p>
+
+  <p> <a href="#">Quisque feugiat arcu eget sapien</a>. <span class="foo">Aenean</span> eget ipsum id arcu bibendum porttitor. Vivamus id lectus non eros eleifend aliquet.</p>
+  
+  <h3>This is a Subsection of the Primary Content</h3>
+  <!-- (Subsection I)-->
+
+  <table>
+    <caption>Grocery List</caption>
+    <thead>
+      <!--Design Time Attribute - Remove before Prodution-->
+      <tr>
+        <th scope="col">Item</th>
+        <th scope="col">Quantity</th>
+        <th scope="col">Cost</th>
+      </tr>
+    </thead>
+    <tr>
+      <td>Jolt Extra</td>
+      <td>3</td>
+      <td>.99</td>
+    </tr>
+    <tr>
+      <td>Jolt</td>
+      <td>3</td>
+      <td>.99</td>
+    </tr>
+    <tr>
+      <td>Jolt</td>
+      <td>3</td>
+      <td>.99</td>
+    </tr>
+    <tr>
+      <td>Jolt</td>
+      <td>3</td>
+      <td>.99</td>
+    </tr>
+    <tr>
+      <td>Jolt</td>
+      <td>3</td>
+      <td>.99</td>
+    </tr>
+    <tr>
+      <td>Jolt</td>
+      <td>3</td>
+      <td>.99</td>
+    </tr>
+  </table>
+
+  <p>This is a paragraph. Often times designers will use "Dummy Text" as a placeholder in a document. An example of that text follows...Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent volutpat velit sed massa. In volutpat eros sagittis
+    ipsum. Donec fringilla risus nec nunc. Fusce tellus arcu, blandit quis, posuere in, porta vitae, lorem. Quisque feugiat arcu eget sapien. Aenean eget ipsum id arcu bibendum porttitor. Vivamus id lectus non eros eleifend aliquet. Cum sociis natoque
+    penatibus et magnis dis parturient montes, nascetur ridiculus mus. Mauris volutpat. Integer dignissim consequat enim. Praesent velit felis, tempus malesuada, sagittis et, condimentum in, ante. Nulla lobortis, ligula sit amet laoreet sollicitudin,
+    sem arcu lacinia tellus, id lobortis arcu urna tincidunt turpis.</p>
+
+  <!--This is a list of instructions.-->
+
+  <ol>
+    <li>Instruction</li>
+    <li>Instruction</li>
+    <li>Instruction</li>
+    <li>Instruction</li>
+    <li>Instruction</li>
+    <li>Instruction</li>
+  </ol>
+
+  <!--This is a list of items to purchase at the grocery store.-->
+
+  <ul>
+    <li>Ramen</li>
+    <li>Cheetos
+      <ul>
+        <li>Ramen</li>
+        <li>Cheetos</li>
+        <li>Jolt</li>
+        <li>Bread</li>
+      </ul>
+    </li>
+    <li>Jolt</li>
+    <li>Bread</li>
+  </ul>
+
+  <!--This is an Example of how we should mark up a term and its description(s)-->
+  <dl>
+    <dt>Term</dt>
+    <dd>Description 1</dd>
+    <dd>Description 2</dd>
+    <dt>Term</dt>
+    <dd>Description 1</dd>
+    <dd>Description 2</dd>
+    <dd>Description 3</dd>
+    <dd>Description 4</dd>
+    <dt>Term</dt>
+    <dd>Description 1</dd>
+  </dl>
+
+  <h4>This is a Subsection of Subsection I</h4>
+
+  <blockquote>This is a Quote. Content precedes design. Design in the absence of content is not design, it's decoration. <cite>From Designing with Web Standards by Jeffery Zeldman.</cite></blockquote>
+
+  <h3>This is a Subsection of the Primary Content</h3>
+  <!--(Subsection II)-->
+
+  <p>This is a paragraph. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent volutpat velit sed massa. In volutpat eros sagittis ipsum. Donec fringilla risus nec nunc. Fusce tellus arcu, blandit quis, posuere in, porta vitae, lorem. Quisque
+    feugiat arcu eget sapien. Aenean eget ipsum id arcu bibendum porttitor. Vivamus id lectus non eros eleifend aliquet. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Mauris volutpat. Integer dignissim consequat
+    enim. Praesent velit felis, tempus malesuada, sagittis et, condimentum in, ante. Nulla lobortis, ligula sit amet laoreet sollicitudin, sem arcu lacinia tellus, id lobortis arcu urna tincidunt turpis. Proin adipiscing ultrices dui. Duis porttitor,
+    libero ut eleifend pellentesque, risus turpis fermentum est, vel nonummy lorem est id nisl. Nulla facilisi. In sagittis tortor. Vestibulum dictum leo vitae augue. Morbi in odio sed nulla luctus sodales.</p>
+</section>
   </main>
+
   <aside aria-label="sidebar">
+    <!-- Particles -->
+    <span class="particle" data-speed="0.030"></span>
+    <span class="particle" data-speed="0.022"></span>
+    <span class="particle" data-speed="0.027"></span>
+    <span class="particle" data-speed="0.034"></span>
+    <span class="particle" data-speed="0.024"></span>
+    <span class="particle" data-speed="0.029"></span>
+    <span class="particle" data-speed="0.021"></span>
+    <span class="particle" data-speed="0.033"></span>
+    <span class="particle" data-speed="0.025"></span>
+    <span class="particle" data-speed="0.028"></span>
+
     <div class="container">
 
       <article class="widget">
@@ -143,8 +283,33 @@ Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea placeat porro esse 
   </aside>
 
   <footer class="primary">
-    <p>&copy; 2026 Your Name</p>
+    <!-- Particles -->
+    <span class="particle" data-speed="0.020"></span>
+    <span class="particle" data-speed="0.024"></span>
+    <span class="particle" data-speed="0.030"></span>
+    <span class="particle" data-speed="0.026"></span>
+    <span class="particle" data-speed="0.022"></span>
+    <span class="particle" data-speed="0.028"></span>
+
+    <p>&copy; 2026 Charles Johnson</p>
   </footer>
+
+  <script>
+    const particles = document.querySelectorAll('.particle');
+
+    document.addEventListener('mousemove', function (e) {
+      const mouseX = e.clientX / window.innerWidth - 0.5;
+      const mouseY = e.clientY / window.innerHeight - 0.5;
+
+      particles.forEach(function (particle) {
+        const speed = parseFloat(particle.dataset.speed) || 0.02;
+        const moveX = mouseX * 40 * speed * 10;
+        const moveY = mouseY * 40 * speed * 10;
+        particle.style.setProperty('--moveX', moveX + 'px');
+        particle.style.setProperty('--moveY', moveY + 'px');
+      });
+    });
+  </script>
 
 </body>
 
