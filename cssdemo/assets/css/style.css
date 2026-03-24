@@ -51,32 +51,12 @@ img {
   border-radius: 6px;
 }
 
-/*--------Image Utility Classes--------*/
-.img-right {
-  float: right;
-  margin: 10px 0 10px 20px;
+/*--------Image Utilities--------*/
+.feature-image {
+  width: 100%;
+  max-width: 100%;
   border: 2px solid #f6c445;
   padding: 10px;
-  max-width: 25%;
-  background: rgba(7, 13, 24, 0.75);
-  box-shadow: 0 0 14px rgba(246, 196, 69, 0.15);
-}
-
-.img-left {
-  float: left;
-  margin: 10px 20px 10px 0;
-  border: 2px solid #f6c445;
-  padding: 10px;
-  max-width: 25%;
-  background: rgba(7, 13, 24, 0.75);
-  box-shadow: 0 0 14px rgba(246, 196, 69, 0.15);
-}
-
-.img-center {
-  margin: 20px auto;
-  border: 2px solid #f6c445;
-  padding: 10px;
-  max-width: 45%;
   background: rgba(7, 13, 24, 0.75);
   box-shadow: 0 0 14px rgba(246, 196, 69, 0.15);
 }
@@ -121,8 +101,8 @@ p {
   color: #d7e1ef;
 }
 
-/*--------Header--------*/
-header.primary {
+/*--------Site Header--------*/
+.site-header {
   position: relative;
   overflow: hidden;
   background:
@@ -135,12 +115,12 @@ header.primary {
   box-shadow: 0 0 28px rgba(246, 196, 69, 0.12);
 }
 
-header.primary a {
+.site-header a {
   color: #f9d76e;
   text-decoration: none;
 }
 
-header.primary h1 {
+.site-header h1 {
   font-size: 2.7rem;
   margin: 0;
   position: relative;
@@ -149,7 +129,7 @@ header.primary h1 {
   letter-spacing: 2px;
 }
 
-header.primary p.subtitle {
+.site-subtitle {
   font-size: 1.15rem;
   margin: 10px 0 20px;
   letter-spacing: 1px;
@@ -158,13 +138,13 @@ header.primary p.subtitle {
   color: #c7d4e5;
 }
 
-/*--------Navigation--------*/
-nav.primary {
+/*--------Site Navigation--------*/
+.site-nav {
   position: relative;
   z-index: 2;
 }
 
-nav.primary ul {
+.site-nav ul {
   padding: 0;
   margin: 0;
   display: flex;
@@ -172,12 +152,12 @@ nav.primary ul {
   gap: 14px;
 }
 
-nav.primary ul li {
+.site-nav ul li {
   list-style: none;
   width: 30%;
 }
 
-nav.primary ul li a {
+.site-nav ul li a {
   background: linear-gradient(180deg, rgba(246, 196, 69, 0.18), rgba(246, 196, 69, 0.06));
   padding: 10px 8px;
   border: 1px solid rgba(246, 196, 69, 0.55);
@@ -191,15 +171,15 @@ nav.primary ul li a {
   text-decoration: none;
 }
 
-nav.primary ul li a:hover {
+.site-nav ul li a:hover {
   background: linear-gradient(180deg, rgba(246, 196, 69, 0.32), rgba(255, 102, 56, 0.16));
   border-color: #ffe07d;
   color: #ffffff;
   box-shadow: 0 0 14px rgba(246, 196, 69, 0.22);
 }
 
-/*--------Main--------*/
-main.container {
+/*--------Site Main--------*/
+.site-main.container {
   background: rgba(7, 12, 20, 0.56);
   border: 1px solid rgba(141, 161, 184, 0.16);
   box-shadow: 0 0 24px rgba(0, 0, 0, 0.32);
@@ -207,8 +187,17 @@ main.container {
   border-radius: 8px;
 }
 
-/*--------Blog Layout--------*/
-#blog {
+/*--------Sections--------*/
+.page-section {
+  margin-bottom: 28px;
+}
+
+.section-heading-full {
+  flex: 0 0 100%;
+}
+
+/*--------Post Layout--------*/
+.post-grid {
   display: flex;
   justify-content: space-between;
   gap: 20px;
@@ -221,7 +210,7 @@ figure {
   margin: 0;
 }
 
-#blog article.post {
+.post-card {
   box-shadow: 0 0 18px rgba(0, 0, 0, 0.34);
   padding: 12px;
   font-size: 0.8rem;
@@ -231,23 +220,23 @@ figure {
   border: 1px solid rgba(246, 196, 69, 0.2);
 }
 
-article.post time,
-article.post figcaption {
+.post-card time,
+.post-card figcaption {
   text-transform: uppercase;
   font-size: 0.6rem;
   color: #b4c3d6;
   letter-spacing: 1px;
 }
 
-article.post a {
+.post-card a {
   color: #f9d76e;
 }
 
-article.post h3 a:hover {
+.post-card h3 a:hover {
   color: #ffffff;
 }
 
-/*--------Universal Layout--------*/
+/*--------Content Layout--------*/
 .two-column {
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -256,15 +245,12 @@ article.post h3 a:hover {
   margin: 20px 0;
 }
 
-.image-box {
-  display: flex;
-  align-items: stretch;
-}
-
 .image-box img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  max-width: 320px;
+  height: auto;
+  object-fit: contain;
+  margin: 0 auto;
 }
 
 /*--------Panels--------*/
@@ -295,8 +281,8 @@ article.post h3 a:hover {
   padding: 18px;
 }
 
-/*--------Mission Brief--------*/
-.mission-brief {
+/*--------Callout--------*/
+.callout-box {
   margin: 16px 0;
   padding: 14px 16px;
   background: rgba(255, 255, 255, 0.04);
@@ -304,8 +290,8 @@ article.post h3 a:hover {
   line-height: 1.7;
 }
 
-/*--------Orders Panel--------*/
-.orders-panel {
+/*--------Ordered Panel--------*/
+.step-panel {
   margin-top: 20px;
   border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 10px;
@@ -313,35 +299,35 @@ article.post h3 a:hover {
   background: rgba(255, 255, 255, 0.03);
 }
 
-.orders-panel h4 {
+.step-panel h4 {
   margin: 0;
   padding: 14px 16px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 }
 
-/*--------Orders List--------*/
-.orders-list {
+/*--------Step List--------*/
+.step-list {
   margin: 0;
   padding: 0;
   list-style: none;
-  counter-reset: order-step;
+  counter-reset: step-count;
 }
 
-.orders-list li {
+.step-list li {
   position: relative;
   margin: 0;
   padding: 14px 16px 14px 54px;
-  counter-increment: order-step;
+  counter-increment: step-count;
   border-top: 1px solid rgba(121, 211, 255, 0.08);
   background: rgba(255, 255, 255, 0.03);
 }
 
-.orders-list li:first-child {
+.step-list li:first-child {
   border-top: none;
 }
 
-.orders-list li::before {
-  content: counter(order-step);
+.step-list li::before {
+  content: counter(step-count);
   position: absolute;
   left: 16px;
   top: 50%;
@@ -513,8 +499,8 @@ blockquote {
   color: #eef4ff;
 }
 
-/*--------Lower Panel--------*/
-.lower-panel {
+/*--------Lower Area--------*/
+.site-lower {
   position: relative;
   overflow: hidden;
   background:
@@ -525,7 +511,7 @@ blockquote {
 }
 
 /*--------Sidebar--------*/
-aside[aria-label="sidebar"] {
+.site-sidebar {
   position: relative;
   overflow: visible;
   background: transparent;
@@ -533,7 +519,7 @@ aside[aria-label="sidebar"] {
   color: #ffffff;
 }
 
-aside .container {
+.site-sidebar .container {
   display: flex;
   justify-content: space-evenly;
   position: relative;
@@ -541,21 +527,21 @@ aside .container {
   gap: 20px;
 }
 
-aside .container a {
+.site-sidebar .container a {
   color: #f9d76e;
 }
 
-aside .container a:last-child {
+.site-sidebar .container a:last-child {
   display: block;
   text-align: right;
   margin-top: 20px;
 }
 
-aside footer {
+.site-sidebar footer {
   display: none;
 }
 
-aside .widget {
+.widget {
   flex: 1;
   background: rgba(7, 12, 20, 0.5);
   border: 1px solid rgba(246, 196, 69, 0.18);
@@ -563,14 +549,14 @@ aside .widget {
   border-radius: 8px;
 }
 
-aside .widget h2 {
+.widget h2 {
   color: #f6c445;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
 
 /*--------Footer--------*/
-footer.primary {
+.site-footer {
   position: relative;
   overflow: visible;
   background: transparent;
@@ -580,17 +566,13 @@ footer.primary {
   border-top: 1px solid rgba(246, 196, 69, 0.22);
 }
 
-footer.primary p {
+.site-footer p {
   position: relative;
   z-index: 2;
   margin: 0;
   color: #f9d76e;
   text-transform: uppercase;
   letter-spacing: 1px;
-}
-
-h2#recent-posts {
-  flex: 0 0 100%;
 }
 
 /*--------Star Particles--------*/
@@ -658,24 +640,24 @@ h2#recent-posts {
     width: 95vw;
   }
 
-  header.primary {
+  .site-header {
     padding: 20px 16px;
   }
 
-  nav.primary ul {
+  .site-nav ul {
     flex-direction: column;
     gap: 15px;
   }
 
-  nav.primary ul li {
+  .site-nav ul li {
     width: 100%;
   }
 
-  nav.primary a {
+  .site-nav a {
     display: block;
   }
 
-  aside .container {
+  .site-sidebar .container {
     flex-direction: column;
     gap: 20px;
   }

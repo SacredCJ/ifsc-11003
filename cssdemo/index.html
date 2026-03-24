@@ -4,47 +4,46 @@
 <html lang="en">
 
 <head>
-  
   <title>IFSC 11003 - Prototype</title>
   <meta charset="UTF-8" />
   <meta name="description" content="Keyword rich narrative on site purpose" />
   <meta name="author" content="Student Name" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Iceberg&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Iceberg&display=swap" rel="stylesheet" />
   <link href="assets/css/style.css" rel="stylesheet" />
 </head>
 
 <body>
   <a class="visually-hidden" href="#main-content">Skip to main content</a>
 
-  <header class="primary">
+  <header class="site-header">
     <h1><a href="index.html">Building the Modern Web</a></h1>
-    <p class="subtitle">HTML5, CSS, JavaScript Fundamentals</p>
-    <nav class="primary container" aria-label="Primary">
+    <p class="site-subtitle">HTML5, CSS, JavaScript Fundamentals</p>
+
+    <nav class="site-nav container" aria-label="Primary">
       <ul>
-        <li><a href="#">Home </a></li>
+        <li><a href="#">Home</a></li>
         <li><a href="#">About</a></li>
         <li><a href="#">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <main id="main-content" class="container">
-
-    <section id="content">
+  <main id="main-content" class="site-main container">
+    <section class="page-section intro-section">
       <h2>Introduction to Web Design</h2>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta laudantium laboriosam veritatis optio adipisci consectetur. Aliquid omnis odit rem, neque accusantium obcaecati debitis laudantium repellendus temporibus assumenda aperiam provident ex officia suscipit voluptatum, aspernatur adipisci hic, dicta unde? Incidunt velit maiores repellendus, quos fugiat amet ducimus reiciendis cum ratione expedita at ex eos. Architecto consectetur numquam iure dolore earum quo inventore quam facere praesentium amet quae, modi hic atque voluptatibus, aut sed aperiam ipsam accusantium.
       </p>
     </section>
 
-    <section id="blog" aria-labelledby="recent-posts">
-      <h2 id="recent-posts">Recent Posts</h2>
+    <section class="page-section post-grid" aria-labelledby="recent-posts">
+      <h2 id="recent-posts" class="section-heading-full">Recent Posts</h2>
 
-      <article class="post">
+      <article class="post-card">
         <header>
           <time class="post-date" datetime="2026-01-01">January 1, 2026</time>
 
@@ -65,7 +64,7 @@
         </footer>
       </article>
 
-      <article class="post">
+      <article class="post-card">
         <header>
           <time class="post-date" datetime="2026-01-01">January 1, 2026</time>
 
@@ -86,7 +85,7 @@
         </footer>
       </article>
 
-      <article class="post">
+      <article class="post-card">
         <header>
           <time class="post-date" datetime="2026-01-01">January 1, 2026</time>
 
@@ -99,142 +98,173 @@
         </header>
 
         <p>
-Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea placeat porro esse sit iusto exercitationem provident? Inventore, aliquam temporibus? Nisi minima mollitia, ex optio alias aperiam vitae omnis nulla molestias!
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea placeat porro esse sit iusto exercitationem provident? Inventore, aliquam temporibus? Nisi minima mollitia, ex optio alias aperiam vitae omnis nulla molestias!
         </p>
 
         <footer class="post-meta">
           Posted by <a href="#">Post Author</a>
         </footer>
       </article>
-
     </section>
-<section id="practice">
+
+<section class="page-section content-section">
   <h2>Properly Marking up an HTML Document</h2>
-  <!--(Primary Content Heading)-->
 
-  <p>This is a paragraph. <em>Often times designers</em> will use <q>Dummy Text</q> as a <strong>placeholder</strong> in a document. An example of that text follows...Lorem ipsum dolor sit amet, consectetuer <del>adipiscing elit</del>. Praesent volutpat
-    velit sed massa. In volutpat eros sagittis ipsum. Donec fringilla risus nec nunc. Fusce tellus arcu, blandit quis, posuere in, porta vitae, lorem.</p>
-<p> <img src="https://thomaswallace.net/wp-content/uploads/2018/02/ualr.png" alt="UA Little Rock Logo" class="img-right" />Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Mauris volutpat. Integer dignissim consequat enim. Praesent velit felis,
-    tempus malesuada, sagittis et, condimentum in, ante. Nulla lobortis, ligula sit amet laoreet sollicitudin, sem arcu lacinia tellus, id lobortis arcu urna tincidunt turpis. <sup><a href="#">1</a></sup> </p>
+  <div class="two-column">
+    <div>
+      <p>
+        This is a paragraph. <em>Often times designers</em> will use <q>Dummy Text</q> as a <strong>placeholder</strong> in a document. An example of that text follows...Lorem ipsum dolor sit amet, consectetuer <del>adipiscing elit</del>. Praesent volutpat velit sed massa. In volutpat eros sagittis ipsum. Donec fringilla risus nec nunc. Fusce tellus arcu, blandit quis, posuere in, porta vitae, lorem.
+      </p>
 
-  <p> <a href="#">Quisque feugiat arcu eget sapien</a>. <span class="foo">Aenean</span> eget ipsum id arcu bibendum porttitor. Vivamus id lectus non eros eleifend aliquet.</p>
-  
-  <h3>This is a Subsection of the Primary Content</h3>
-  <!-- (Subsection I)-->
+      <p>
+        <a href="#">Quisque feugiat arcu eget sapien</a>. <span class="foo">Aenean</span> eget ipsum id arcu bibendum porttitor. Vivamus id lectus non eros eleifend aliquet.
+      </p>
 
-  <table>
-    <caption>Grocery List</caption>
-    <thead>
-      <!--Design Time Attribute - Remove before Prodution-->
-      <tr>
-        <th scope="col">Item</th>
-        <th scope="col">Quantity</th>
-        <th scope="col">Cost</th>
-      </tr>
-    </thead>
-    <tr>
-      <td>Jolt Extra</td>
-      <td>3</td>
-      <td>.99</td>
-    </tr>
-    <tr>
-      <td>Jolt</td>
-      <td>3</td>
-      <td>.99</td>
-    </tr>
-    <tr>
-      <td>Jolt</td>
-      <td>3</td>
-      <td>.99</td>
-    </tr>
-    <tr>
-      <td>Jolt</td>
-      <td>3</td>
-      <td>.99</td>
-    </tr>
-    <tr>
-      <td>Jolt</td>
-      <td>3</td>
-      <td>.99</td>
-    </tr>
-    <tr>
-      <td>Jolt</td>
-      <td>3</td>
-      <td>.99</td>
-    </tr>
-  </table>
+      <p>
+        Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Mauris volutpat. Integer dignissim consequat enim. Praesent velit felis, tempus malesuada, sagittis et, condimentum in, ante. Nulla lobortis, ligula sit amet laoreet sollicitudin, sem arcu lacinia tellus, id lobortis arcu urna tincidunt turpis. <sup><a href="#">1</a></sup>
+      </p>
+    </div>
 
-  <p>This is a paragraph. Often times designers will use "Dummy Text" as a placeholder in a document. An example of that text follows...Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent volutpat velit sed massa. In volutpat eros sagittis
-    ipsum. Donec fringilla risus nec nunc. Fusce tellus arcu, blandit quis, posuere in, porta vitae, lorem. Quisque feugiat arcu eget sapien. Aenean eget ipsum id arcu bibendum porttitor. Vivamus id lectus non eros eleifend aliquet. Cum sociis natoque
-    penatibus et magnis dis parturient montes, nascetur ridiculus mus. Mauris volutpat. Integer dignissim consequat enim. Praesent velit felis, tempus malesuada, sagittis et, condimentum in, ante. Nulla lobortis, ligula sit amet laoreet sollicitudin,
-    sem arcu lacinia tellus, id lobortis arcu urna tincidunt turpis.</p>
-
-  <!--This is a list of instructions.-->
-
-  <ol>
-    <li>Instruction</li>
-    <li>Instruction</li>
-    <li>Instruction</li>
-    <li>Instruction</li>
-    <li>Instruction</li>
-    <li>Instruction</li>
-  </ol>
-
-  <!--This is a list of items to purchase at the grocery store.-->
-
-  <ul>
-    <li>Ramen</li>
-    <li>Cheetos
-      <ul>
-        <li>Ramen</li>
-        <li>Cheetos</li>
-        <li>Jolt</li>
-        <li>Bread</li>
-      </ul>
-    </li>
-    <li>Jolt</li>
-    <li>Bread</li>
-  </ul>
-
-  <!--This is an Example of how we should mark up a term and its description(s)-->
-  <dl>
-    <dt>Term</dt>
-    <dd>Description 1</dd>
-    <dd>Description 2</dd>
-    <dt>Term</dt>
-    <dd>Description 1</dd>
-    <dd>Description 2</dd>
-    <dd>Description 3</dd>
-    <dd>Description 4</dd>
-    <dt>Term</dt>
-    <dd>Description 1</dd>
-  </dl>
-
-  <h4>This is a Subsection of Subsection I</h4>
-
-  <blockquote>This is a Quote. Content precedes design. Design in the absence of content is not design, it's decoration. <cite>From Designing with Web Standards by Jeffery Zeldman.</cite></blockquote>
-
-  <h3>This is a Subsection of the Primary Content</h3>
-  <!--(Subsection II)-->
-
-  <p>This is a paragraph. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent volutpat velit sed massa. In volutpat eros sagittis ipsum. Donec fringilla risus nec nunc. Fusce tellus arcu, blandit quis, posuere in, porta vitae, lorem. Quisque
-    feugiat arcu eget sapien. Aenean eget ipsum id arcu bibendum porttitor. Vivamus id lectus non eros eleifend aliquet. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Mauris volutpat. Integer dignissim consequat
-    enim. Praesent velit felis, tempus malesuada, sagittis et, condimentum in, ante. Nulla lobortis, ligula sit amet laoreet sollicitudin, sem arcu lacinia tellus, id lobortis arcu urna tincidunt turpis. Proin adipiscing ultrices dui. Duis porttitor,
-    libero ut eleifend pellentesque, risus turpis fermentum est, vel nonummy lorem est id nisl. Nulla facilisi. In sagittis tortor. Vestibulum dictum leo vitae augue. Morbi in odio sed nulla luctus sodales.</p>
+    <div class="image-box">
+      <img src="https://thomaswallace.net/wp-content/uploads/2018/02/ualr.png" alt="UA Little Rock Logo" class="feature-image"/>
+    </div>
+  </div>
 </section>
+      <div class="panel">
+        <h3 class="panel-header">This is a Subsection of the Primary Content</h3>
+
+        <table>
+          <caption>Grocery List</caption>
+          <thead>
+            <tr>
+              <th scope="col">Item</th>
+              <th scope="col">Quantity</th>
+              <th scope="col">Cost</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Jolt Extra</td>
+              <td>3</td>
+              <td>.99</td>
+            </tr>
+            <tr>
+              <td>Jolt</td>
+              <td>3</td>
+              <td>.99</td>
+            </tr>
+            <tr>
+              <td>Jolt</td>
+              <td>3</td>
+              <td>.99</td>
+            </tr>
+            <tr>
+              <td>Jolt</td>
+              <td>3</td>
+              <td>.99</td>
+            </tr>
+            <tr>
+              <td>Jolt</td>
+              <td>3</td>
+              <td>.99</td>
+            </tr>
+            <tr>
+              <td>Jolt</td>
+              <td>3</td>
+              <td>.99</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="panel">
+        <h3 class="panel-header">Document Notes</h3>
+
+        <div class="panel-body">
+          <p class="callout-box">
+            This is a paragraph. Often times designers will use "Dummy Text" as a placeholder in a document. An example of that text follows...Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent volutpat velit sed massa. In volutpat eros sagittis ipsum. Donec fringilla risus nec nunc. Fusce tellus arcu, blandit quis, posuere in, porta vitae, lorem. Quisque feugiat arcu eget sapien. Aenean eget ipsum id arcu bibendum porttitor. Vivamus id lectus non eros eleifend aliquet. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Mauris volutpat. Integer dignissim consequat enim. Praesent velit felis, tempus malesuada, sagittis et, condimentum in, ante. Nulla lobortis, ligula sit amet laoreet sollicitudin, sem arcu lacinia tellus, id lobortis arcu urna tincidunt turpis.
+          </p>
+
+          <div class="step-panel">
+            <h4>Instruction List</h4>
+            <ol class="step-list">
+              <li>Instruction</li>
+              <li>Instruction</li>
+              <li>Instruction</li>
+              <li>Instruction</li>
+              <li>Instruction</li>
+              <li>Instruction</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+
+      <div class="list-panel">
+        <h3>Item List</h3>
+
+        <div class="dropdown-list">
+          <details class="list-group" open>
+            <summary>Grocery Store Items</summary>
+            <ul>
+              <li>Ramen</li>
+              <li>
+                Cheetos
+                <ul>
+                  <li>Ramen</li>
+                  <li>Cheetos</li>
+                  <li>Jolt</li>
+                  <li>Bread</li>
+                </ul>
+              </li>
+              <li>Jolt</li>
+              <li>Bread</li>
+            </ul>
+          </details>
+        </div>
+      </div>
+
+      <div class="definition-panel">
+        <dl>
+          <dt>Term</dt>
+          <dd>Description 1</dd>
+          <dd>Description 2</dd>
+
+          <dt>Term</dt>
+          <dd>Description 1</dd>
+          <dd>Description 2</dd>
+          <dd>Description 3</dd>
+          <dd>Description 4</dd>
+
+          <dt>Term</dt>
+          <dd>Description 1</dd>
+        </dl>
+      </div>
+
+      <h4>This is a Subsection of Subsection I</h4>
+
+      <blockquote>
+        This is a Quote. Content precedes design. Design in the absence of content is not design, it's decoration.
+        <cite>From Designing with Web Standards by Jeffery Zeldman.</cite>
+      </blockquote>
+
+      <h3>This is a Subsection of the Primary Content</h3>
+
+      <p>
+        This is a paragraph. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent volutpat velit sed massa. In volutpat eros sagittis ipsum. Donec fringilla risus nec nunc. Fusce tellus arcu, blandit quis, posuere in, porta vitae, lorem. Quisque feugiat arcu eget sapien. Aenean eget ipsum id arcu bibendum porttitor. Vivamus id lectus non eros eleifend aliquet. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Mauris volutpat. Integer dignissim consequat enim. Praesent velit felis, tempus malesuada, sagittis et, condimentum in, ante. Nulla lobortis, ligula sit amet laoreet sollicitudin, sem arcu lacinia tellus, id lobortis arcu urna tincidunt turpis. Proin adipiscing ultrices dui. Duis porttitor, libero ut eleifend pellentesque, risus turpis fermentum est, vel nonummy lorem est id nisl. Nulla facilisi. In sagittis tortor. Vestibulum dictum leo vitae augue. Morbi in odio sed nulla luctus sodales.
+      </p>
+    </section>
   </main>
 
-  <section class="lower-panel">
-    <aside aria-label="sidebar">
+  <section class="site-lower">
+    <aside class="site-sidebar" aria-label="sidebar">
       <div class="container">
-
         <article class="widget">
           <header>
             <h2>Sample Sidebar Item</h2>
           </header>
 
           <p>
-            Quisque justo erat, <a href="#"> place holder </a>varius placerat fermentum vel, iaculis vel ligula...
+            Quisque justo erat, <a href="#">place holder</a> varius placerat fermentum vel, iaculis vel ligula...
             <a href="#">Read More &raquo;</a>
           </p>
 
@@ -253,17 +283,15 @@ Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea placeat porro esse 
 
           <footer>Widget Footer</footer>
         </article>
-
       </div>
     </aside>
 
-    <footer class="primary">
+    <footer class="site-footer">
       <p>&copy; 2026 Charles Johnson</p>
     </footer>
   </section>
 
   <script src="assets/js/script.js"></script>
-
 </body>
 
 </html>

@@ -17,11 +17,11 @@
 <body>
   <a class="visually-hidden" href="#main-content">Skip to main content</a>
 
-  <header class="primary">
+  <header class="site-header">
     <h1><a href="GeneratedNewsStory.html">Super Earth War Bulletin</a></h1>
-    <p class="subtitle">Official Updates for Managed Democracy Deployment Forces</p>
+    <p class="site-subtitle">Official Updates for Managed Democracy Deployment Forces</p>
 
-    <nav class="primary container" aria-label="Primary">
+    <nav class="site-nav container" aria-label="Primary">
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="https://helldivers.io/" target="_blank">War Reports</a></li>
@@ -30,8 +30,8 @@
     </nav>
   </header>
 
-  <main id="main-content" class="container">
-    <section id="content">
+  <main id="main-content" class="site-main container">
+    <section class="page-section intro-section">
       <h2>Frontline Briefing</h2>
       <p>
         Citizens of Super Earth, your continued courage has once again carried Managed Democracy into the darkest corners of the galaxy.
@@ -40,10 +40,10 @@
       </p>
     </section>
 
-    <section id="blog" aria-labelledby="recent-posts">
-      <h2 id="recent-posts">Recent Posts</h2>
+    <section class="page-section post-grid" aria-labelledby="recent-posts">
+      <h2 id="recent-posts" class="section-heading-full">Recent Posts</h2>
 
-      <article class="post">
+      <article class="post-card">
         <header>
           <time class="post-date" datetime="2026-03-18">March 18, 2026</time>
 
@@ -65,7 +65,7 @@
         </footer>
       </article>
 
-      <article class="post">
+      <article class="post-card">
         <header>
           <time class="post-date" datetime="2026-03-18">March 18, 2026</time>
 
@@ -88,7 +88,7 @@
         </footer>
       </article>
 
-      <article class="post">
+      <article class="post-card">
         <header>
           <time class="post-date" datetime="2026-03-18">March 18, 2026</time>
 
@@ -111,7 +111,7 @@
       </article>
     </section>
 
-    <section id="practice">
+    <section class="page-section content-section">
       <h2>Dispatches from the Ministry of Truth</h2>
 
       <div class="two-column">
@@ -133,7 +133,7 @@
         </div>
 
         <div class="image-box">
-          <img src="assets/images/MinistryOfTruth.png" alt="Ministry of Truth Logo" />
+          <img src="assets/images/MinistryOfTruth.png" alt="Ministry of Truth Logo" class="feature-image"/>
         </div>
       </div>
 
@@ -188,15 +188,15 @@
         <h3 class="panel-header">Field Purchase Notes</h3>
 
         <div class="panel-body">
-          <p class="mission-brief">
+          <p class="callout-box">
             The latest requisition chatter from the front suggests Divers are prioritizing anything that can clear space fast, survive chaos, and make them look like hardened trench veterans while doing it.
             Whether your goal is setting the battlefield on fire, gassing a chokepoint, or simply looking authoritative enough that your squad stops asking questions, the newest gear delivers exactly the kind of overkill democracy demands.
           </p>
 
-          <div class="orders-panel">
+          <div class="step-panel">
             <h4>Recommended Deployment Order</h4>
 
-            <ol class="orders-list">
+            <ol class="step-list">
               <li>Land in hostile territory with confidence that may or may not be deserved</li>
               <li>Call in your support gear before remembering the enemy is already behind you</li>
               <li>Use every explosive with patriotism and only moderate concern for nearby allies</li>
@@ -279,8 +279,8 @@
     </section>
   </main>
 
-  <section class="lower-panel">
-    <aside aria-label="sidebar">
+  <section class="site-lower">
+    <aside class="site-sidebar" aria-label="sidebar">
       <div class="container">
         <article class="widget">
           <header>
@@ -310,7 +310,7 @@
       </div>
     </aside>
 
-    <footer class="primary">
+    <footer class="site-footer">
       <p>&copy; 2026 Charles Johnson</p>
     </footer>
   </section>
