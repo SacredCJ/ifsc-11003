@@ -4,13 +4,13 @@ document.addEventListener("DOMContentLoaded", function () {
   /*--------Sections Setup--------*/
   const sections = [
     {
-      element: document.querySelector("header.primary"),
+      element: document.querySelector(".site-header"),
       maxStars: 15,
       startStars: 12,
       spawnEvery: 750
     },
     {
-      element: document.querySelector(".lower-panel"),
+      element: document.querySelector(".site-lower"),
       maxStars: 22,
       startStars: 14,
       spawnEvery: 700
