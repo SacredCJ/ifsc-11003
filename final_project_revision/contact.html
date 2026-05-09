@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Page metadata and linked resources -->
+  <title>Contact | Evolution of Xbox</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="Contact page for the Evolution of Xbox student project.">
+  <meta name="keywords" content="Xbox, contact, student project">
+  <meta name="author" content="Chase Johnson">
+  <meta name="robots" content="noindex">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google fonts used throughout the site -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Main stylesheet controlling layout, colors, and light mode -->
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body id="contact">
+
+  <!-- Skip link for keyboard navigation -->
+  <a href="#content" class="skip-link">Skip to main content</a>
+
+  <!-- Theme toggle controlled by scripts.js -->
+  <button id="theme-toggle" class="theme-toggle" type="button">Light Mode</button>
+
+  <!-- Main site header and navigation -->
+  <header class="primary">
+    <div class="container">
+
+      <!-- Xbox logo image -->
+      <img src="assets/img/xbox-logo.png" alt="Xbox logo" class="site-logo">
+
+      <!-- Main site title -->
+      <h1><a href="index.html">Evolution of Xbox</a></h1>
+      <h2>Contact</h2>
+
+      <!-- Main navigation menu -->
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="history.html">Console History</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- Main page content -->
+  <main id="content">
+
+    <!-- Contact form section styled by #contact-form-section and .contact-form -->
+    <section id="contact-form-section">
+      <div class="container feature-box">
+
+        <!-- Contact page heading and intro -->
+        <h2>Feedback Form</h2>
+
+        <p>
+          Use this form to send feedback about the project, report a problem, or suggest something that could make the site easier to use.
+        </p>
+
+        <!-- Main contact form -->
+        <form class="contact-form" action="https://formspree.io/f/your-form-id" method="post">
+
+          <!-- Name input -->
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name">
+          </div>
+
+          <!-- Email input -->
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+
+          <!-- Subject input -->
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" required>
+          </div>
+
+          <!-- Message input -->
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="6" required></textarea>
+          </div>
+
+          <!-- Submit button -->
+          <button type="submit">Send Message</button>
+
+        </form>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Site footer -->
+  <footer id="colophon">
+
+    <p>
+      This website was created as a student project for educational purposes.
+      Microsoft and Xbox are not affiliated with or endorsing this work.
+    </p>
+
+    <p>
+      <a href="mailto:ccjohnson2@ualr.edu">Report a Problem</a> |
+      <a href="https://www.xbox.com" target="_blank" rel="noopener">Official Xbox Website</a> |
+      <a href="#contact">Back to Top</a>
+    </p>
+
+  </footer>
+
+  <!-- Shared JavaScript for theme toggle -->
+  <script src="assets/js/scripts.js"></script>
+
+</body>
+
+</html>

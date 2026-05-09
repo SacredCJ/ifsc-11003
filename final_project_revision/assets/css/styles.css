@@ -1,0 +1,532 @@
+/* ---------- Base page setup ---------- */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 1.08rem;
+  line-height: 1.7;
+  color: #f4fff4;
+  background:
+    radial-gradient(circle at top left, rgba(140, 255, 140, 0.12), transparent 32%),
+    radial-gradient(circle at bottom right, rgba(16, 124, 16, 0.2), transparent 35%),
+    linear-gradient(135deg, #020402, #071107, #020302);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ---------- Shared text and links ---------- */
+
+a {
+  color: #8cff8c;
+  font-weight: 700;
+}
+
+a:hover,
+a:focus {
+  color: #ffffff;
+}
+
+p {
+  color: #e7ffe7;
+  font-size: 1.08rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+nav {
+  font-family: "Orbitron", Arial, sans-serif;
+}
+
+h2,
+h3,
+h4 {
+  color: #8cff8c;
+}
+
+.eyebrow {
+  margin: 0 0 0.75rem;
+  color: #8cff8c;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* ---------- Shared layout containers ---------- */
+
+.container {
+  width: min(1120px, 90%);
+  margin: 0 auto;
+}
+
+.section-intro {
+  flex: 0 0 100%;
+  max-width: 900px;
+  margin: 0 auto 1.5rem;
+  text-align: center;
+  font-size: 1.12rem;
+}
+
+.feature-box {
+  padding: 2.6rem;
+  border: 1px solid rgba(140, 255, 140, 0.24);
+  border-radius: 24px;
+  background: rgba(10, 20, 10, 0.92);
+  box-shadow: 0 0 28px rgba(16, 124, 16, 0.18);
+}
+
+/* ---------- Accessibility ---------- */
+
+.skip-link {
+  position: absolute;
+  top: 0;
+  left: -999px;
+  padding: 0.75rem 1rem;
+  color: #ffffff;
+  background-color: #107c10;
+  z-index: 1000;
+}
+
+.skip-link:focus {
+  left: 0;
+}
+
+/* ---------- Header, logo, and navigation ---------- */
+
+.primary {
+  min-height: 64vh;
+  padding: 1.5rem 0 3rem;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.82)),
+    url("../img/xbox-hero.png");
+  background-size: cover;
+  background-position: center;
+  border-bottom: 3px solid #107c10;
+  box-shadow: 0 0 42px rgba(16, 124, 16, 0.55);
+}
+
+#history .primary,
+#faq .primary,
+#contact .primary {
+  min-height: 42vh;
+}
+
+.site-logo {
+  display: block;
+  width: 110px;
+  margin: 0 auto 1.5rem;
+  filter:
+    drop-shadow(0 0 12px rgba(120, 255, 120, 0.65))
+    drop-shadow(0 0 28px rgba(16, 124, 16, 0.45));
+}
+
+.primary h1,
+.primary h2 {
+  text-align: center;
+}
+
+.primary h1 {
+  margin: 1rem 0 0.5rem;
+  font-size: clamp(2.5rem, 7vw, 5.4rem);
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+.primary h1 a {
+  color: #ffffff;
+  text-decoration: none;
+  text-shadow:
+    0 0 8px rgba(140, 255, 140, 0.85),
+    0 0 26px rgba(16, 124, 16, 1);
+}
+
+.primary h2 {
+  margin: 0 0 2rem;
+  font-size: clamp(1.1rem, 3vw, 1.75rem);
+  color: #8cff8c;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+nav a {
+  display: block;
+  min-width: 155px;
+  padding: 0.9rem 1.1rem;
+  color: #ffffff;
+  text-align: center;
+  text-decoration: none;
+  border: 1px solid rgba(140, 255, 140, 0.5);
+  border-radius: 999px;
+  background: linear-gradient(135deg, #107c10, #031b03);
+  transition: 0.2s ease;
+}
+
+nav a:hover,
+nav a:focus {
+  background: #107c10;
+  transform: translateY(-2px);
+  box-shadow: 0 0 18px rgba(140, 255, 140, 0.35);
+}
+
+/* ---------- Theme toggle button ---------- */
+
+.theme-toggle {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 2000;
+  padding: 0.7rem 1.05rem;
+  color: #ffffff;
+  font: inherit;
+  font-weight: 700;
+  border: 1px solid rgba(140, 255, 140, 0.5);
+  border-radius: 999px;
+  background: linear-gradient(135deg, #107c10, #19b319);
+  box-shadow: 0 0 18px rgba(16, 124, 16, 0.45);
+  cursor: pointer;
+}
+
+.theme-toggle:hover,
+.theme-toggle:focus {
+  color: #031203;
+  background: #8cff8c;
+}
+
+/* ---------- Main content sections ---------- */
+
+main {
+  padding: 3rem 0;
+}
+
+section {
+  margin-bottom: 4rem;
+}
+
+#intro .container,
+#contact-form-section .container {
+  text-align: center;
+}
+
+#console-generations {
+  padding: 3.5rem 0;
+  background: rgba(3, 8, 3, 0.9);
+}
+
+#console-generations .container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.6rem;
+}
+
+#console-generations h2 {
+  flex: 0 0 100%;
+  text-align: center;
+}
+
+#hero-image {
+  text-align: center;
+}
+
+/* ---------- Console cards and images ---------- */
+
+.post {
+  flex: 1 1 245px;
+  overflow: hidden;
+  border: 1px solid rgba(140, 255, 140, 0.26);
+  border-radius: 20px;
+  background: #071007;
+  transition: 0.2s ease;
+}
+
+.post:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 24px rgba(140, 255, 140, 0.22);
+}
+
+.post figure {
+  margin: 0;
+}
+
+.post img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.post figcaption {
+  padding: 0.6rem 1rem;
+  color: #cfffcf;
+  background-color: rgba(0, 0, 0, 0.78);
+}
+
+.post h3,
+.post p {
+  padding-left: 1.1rem;
+  padding-right: 1.1rem;
+}
+
+.img-center {
+  width: 100%;
+  max-width: 1200px;
+  margin: 2rem auto;
+  border: 2px solid rgba(120, 255, 120, 0.55);
+  border-radius: 18px;
+  box-shadow: 0 0 28px rgba(16, 124, 16, 0.28);
+}
+
+/* ---------- Timeline and FAQ cards ---------- */
+
+#timeline .container {
+  border-left: 3px solid #107c10;
+}
+
+.timeline-item,
+.faq-item,
+.widget {
+  margin-bottom: 1.5rem;
+  padding: 1.55rem;
+  border: 1px solid rgba(140, 255, 140, 0.26);
+  border-radius: 18px;
+  background: #071007;
+  box-shadow: 0 0 18px rgba(16, 124, 16, 0.12);
+}
+
+/* ---------- Interactive comparison table ---------- */
+
+.comparison-panel {
+  flex: 0 0 100%;
+  padding: 1.8rem;
+  border: 1px solid rgba(140, 255, 140, 0.28);
+  border-radius: 22px;
+  background: rgba(6, 16, 6, 0.96);
+}
+
+.comparison-controls {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 1.3rem 0;
+}
+
+.comparison-controls button {
+  padding: 0.75rem 1rem;
+  color: #ffffff;
+  font: inherit;
+  font-weight: 700;
+  border: 1px solid rgba(140, 255, 140, 0.45);
+  border-radius: 999px;
+  background: linear-gradient(135deg, #107c10, #031b03);
+  cursor: pointer;
+}
+
+.comparison-controls button.active,
+.comparison-controls button:hover {
+  color: #031203;
+  background: #8cff8c;
+}
+
+/* ---------- Standard tables ---------- */
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #ffffff;
+  background-color: #101810;
+}
+
+th,
+td {
+  padding: 1rem;
+  border: 1px solid rgba(140, 255, 140, 0.25);
+}
+
+th {
+  background: #107c10;
+}
+
+tr:nth-child(even) {
+  background-color: #151f15;
+}
+
+/* ---------- Contact form ---------- */
+
+.contact-form {
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.4rem;
+  color: #8cff8c;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 0.9rem;
+  color: #ffffff;
+  border: 1px solid rgba(140, 255, 140, 0.36);
+  border-radius: 12px;
+  background-color: #071107;
+}
+
+button {
+  padding: 0.9rem 1.45rem;
+  color: #ffffff;
+  font: inherit;
+  border: none;
+  border-radius: 999px;
+  background: #107c10;
+}
+
+/* ---------- Aside and footer ---------- */
+
+aside {
+  padding: 3.5rem 0;
+  background: rgba(3, 8, 3, 0.94);
+}
+
+aside .container {
+  display: flex;
+  gap: 1.6rem;
+}
+
+.widget {
+  flex: 1;
+}
+
+#colophon {
+  padding: 2.2rem 5%;
+  text-align: center;
+  border-top: 3px solid #107c10;
+  background: #020402;
+}
+
+/* ---------- Light mode colors ---------- */
+
+body.light-mode {
+  color: #102710;
+  background:
+    radial-gradient(circle at top left, rgba(92, 255, 92, 0.24), transparent 34%),
+    radial-gradient(circle at bottom right, rgba(16, 124, 16, 0.14), transparent 32%),
+    linear-gradient(135deg, #ffffff 0%, #f7fff7 45%, #e4f7e4 100%);
+}
+
+body.light-mode p,
+body.light-mode td,
+body.light-mode li {
+  color: #102710;
+}
+
+body.light-mode h2,
+body.light-mode h3,
+body.light-mode h4 {
+  color: #0b6f0b;
+}
+
+body.light-mode .feature-box,
+body.light-mode .post,
+body.light-mode .timeline-item,
+body.light-mode .faq-item,
+body.light-mode .widget,
+body.light-mode .comparison-panel {
+  background: linear-gradient(180deg, #ffffff, #efffef);
+  border: 1px solid rgba(16, 124, 16, 0.34);
+  box-shadow: 0 0 24px rgba(77, 196, 77, 0.22);
+}
+
+body.light-mode nav a {
+  color: #064f06;
+  background: linear-gradient(135deg, #ffffff, #d9ffd9);
+}
+
+body.light-mode nav a:hover {
+  color: #ffffff;
+  background: #107c10;
+}
+
+body.light-mode table {
+  color: #102710;
+  background: #ffffff;
+}
+
+body.light-mode th {
+  color: #ffffff;
+  background: #107c10;
+}
+
+body.light-mode td {
+  background: #ffffff;
+}
+
+body.light-mode tr:nth-child(even) td {
+  background: #e8ffe8;
+}
+
+body.light-mode input,
+body.light-mode textarea {
+  color: #102710;
+  background: #ffffff;
+}
+
+body.light-mode #console-generations,
+body.light-mode aside,
+body.light-mode #colophon {
+  background: #ecffec;
+}
+
+/* ---------- Mobile layout adjustments ---------- */
+
+@media (max-width: 850px) {
+  aside .container {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 650px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav a {
+    width: 230px;
+  }
+
+  .feature-box,
+  .comparison-panel {
+    padding: 1.3rem;
+  }
+}

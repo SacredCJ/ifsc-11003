@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Page metadata and linked resources -->
+  <title>Evolution of Xbox</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="A student project about the evolution of Xbox consoles.">
+  <meta name="keywords" content="Xbox, Xbox history, Xbox 360, Xbox One, Xbox Series X">
+  <meta name="author" content="Chase Johnson">
+  <meta name="robots" content="noindex">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google fonts used throughout the site -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Main stylesheet controlling layout, colors, and light mode -->
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body id="home">
+
+  <!-- Skip link for keyboard navigation -->
+  <a href="#content" class="skip-link">Skip to main content</a>
+
+  <!-- Theme toggle controlled by scripts.js -->
+  <button id="theme-toggle" class="theme-toggle" type="button">Light Mode</button>
+
+  <!-- Main site header and navigation -->
+  <header class="primary">
+    <div class="container">
+
+      <!-- Xbox logo image -->
+      <img src="assets/img/xbox-logo.png" alt="Xbox logo" class="site-logo">
+
+      <!-- Main site title -->
+      <h1><a href="index.html">Evolution of Xbox</a></h1>
+      <h2>From the Original Xbox to the Series X</h2>
+
+      <!-- Main navigation menu -->
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="history.html">Console History</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- Main page content -->
+  <main id="content">
+
+    <!-- Intro section styled by #intro and .feature-box -->
+    <section id="intro">
+      <div class="container feature-box">
+        <p class="eyebrow">A student built console history project</p>
+
+        <h2>Powering Generations of Gaming</h2>
+
+        <p>
+          Xbox began as Microsoft’s entry into console gaming and grew into one of the most recognizable gaming brands in the world. What started as one large black console became a full gaming platform connected through consoles, online services, subscriptions, digital libraries, and backward compatibility.
+        </p>
+
+        <p>
+          This site follows the major Xbox generations from the original Xbox to the Xbox Series X and Series S. Each generation had a different purpose. The original Xbox proved Microsoft could compete in gaming. The Xbox 360 helped make online console play feel normal. The Xbox One showed the growing importance of services and media. The Series X and Series S focus on speed, performance, and giving players more ways to access their games.
+        </p>
+
+        <p>
+          The goal of this project is to show how Xbox changed over time, not just through hardware, but through the way people played, bought, saved, and shared games.
+        </p>
+      </div>
+    </section>
+
+    <!-- Featured console generation cards -->
+    <section id="console-generations">
+      <div class="container">
+
+        <h2>Featured Xbox Generations</h2>
+
+        <p class="section-intro">
+          Each Xbox generation represents a different stage in the brand’s history. The consoles below show how Xbox moved from a new competitor into a platform focused on online play, digital access, and long term game support.
+        </p>
+
+        <!-- Original Xbox card -->
+        <article class="post">
+          <header>
+            <figure>
+              <img src="assets/img/original-xbox.jpg" alt="Original Xbox console with controller">
+              <figcaption>The console that started Xbox</figcaption>
+            </figure>
+
+            <h3>Original Xbox</h3>
+
+            <p>
+              The original Xbox was Microsoft’s first serious step into the console market. It stood out because it was powerful, heavy, and different from the systems around it. It included a built in hard drive, which made saving games and storing content easier. Halo gave the system a strong identity almost immediately and helped Xbox become known for first person shooters and multiplayer gaming.
+            </p>
+          </header>
+        </article>
+
+        <!-- Xbox 360 card -->
+        <article class="post">
+          <header>
+            <figure>
+              <img src="assets/img/xbox-360.jpg" alt="Xbox 360 console with controller">
+              <figcaption>The rise of Xbox Live</figcaption>
+            </figure>
+
+            <h3>Xbox 360</h3>
+
+            <p>
+              The Xbox 360 became one of the most important systems in Xbox history. It helped make online console gaming feel normal through Xbox Live, achievements, party chat, downloadable games, and strong multiplayer communities. For many players, this was the generation where gaming became more social and connected.
+            </p>
+          </header>
+        </article>
+
+        <!-- Xbox One card -->
+        <article class="post">
+          <header>
+            <figure>
+              <img src="assets/img/xbox-one.jpg" alt="Xbox One console with controller">
+              <figcaption>Xbox shifts toward services</figcaption>
+            </figure>
+
+            <h3>Xbox One</h3>
+
+            <p>
+              The Xbox One had a rough beginning because its launch focused heavily on entertainment, television, and Kinect features instead of games. Over time, the system improved through updates, Game Pass, backward compatibility, and stronger models like the Xbox One S and Xbox One X. It became an important bridge between older Xbox consoles and the modern Xbox platform.
+            </p>
+          </header>
+        </article>
+
+        <!-- Xbox Series X and S card -->
+        <article class="post">
+          <header>
+            <figure>
+              <img src="assets/img/xbox-series-x.jpg" alt="Xbox Series X console with controller">
+              <figcaption>Modern Xbox performance</figcaption>
+            </figure>
+
+            <h3>Xbox Series X and Series S</h3>
+
+            <p>
+              The Xbox Series X and Series S represent the modern Xbox direction. This generation focuses on faster loading, stronger performance, higher frame rates, digital libraries, Game Pass, and keeping older games playable. Instead of only focusing on one console, modern Xbox focuses on giving players access across multiple devices and services.
+            </p>
+          </header>
+        </article>
+
+        <!-- Interactive comparison table section -->
+        <div class="comparison-panel">
+
+          <h3>Interactive Xbox Console Comparison</h3>
+
+          <p>
+            Use the buttons below to compare different Xbox releases. This table shows the main focus, upgrades, downsides, and best use for each model.
+          </p>
+
+          <!-- Comparison filter buttons controlled by scripts.js -->
+          <div class="comparison-controls">
+            <button type="button" data-filter="all">All</button>
+            <button type="button" data-filter="original">Original Xbox</button>
+            <button type="button" data-filter="360">Xbox 360</button>
+            <button type="button" data-filter="one">Xbox One</button>
+            <button type="button" data-filter="series">Series X and S</button>
+          </div>
+
+          <!-- Main comparison table -->
+          <div class="table-wrap">
+            <table class="comparison-table">
+
+              <caption>Xbox model comparison by generation</caption>
+
+              <thead>
+                <tr>
+                  <th scope="col">Model</th>
+                  <th scope="col">Focus</th>
+                  <th scope="col">Upgrade</th>
+                  <th scope="col">Downside</th>
+                  <th scope="col">Best For</th>
+                </tr>
+              </thead>
+
+              <tbody>
+
+                <tr data-generation="original">
+                  <td>Original Xbox</td>
+                  <td>Raw hardware power and a new console identity</td>
+                  <td>Built in hard drive, strong performance, and Halo</td>
+                  <td>Large console size and a smaller library than older competitors</td>
+                  <td>Classic Xbox history, Halo, and early 2000s console gaming</td>
+                </tr>
+
+                <tr data-generation="360">
+                  <td>Xbox 360 Core</td>
+                  <td>Lower cost entry into the Xbox 360 generation</td>
+                  <td>Made the system cheaper at launch</td>
+                  <td>No hard drive included and fewer included features</td>
+                  <td>Players who wanted the cheapest way into Xbox 360</td>
+                </tr>
+
+                <tr data-generation="360">
+                  <td>Xbox 360 Premium</td>
+                  <td>Main Xbox 360 experience</td>
+                  <td>Hard drive, better storage, and stronger online setup</td>
+                  <td>Early models had reliability problems</td>
+                  <td>Xbox Live, achievements, party chat, and multiplayer gaming</td>
+                </tr>
+
+                <tr data-generation="360">
+                  <td>Xbox 360 Elite</td>
+                  <td>More storage and a more premium version</td>
+                  <td>Larger hard drive and HDMI support</td>
+                  <td>Still part of the same generation and still had early reliability concerns</td>
+                  <td>Players who wanted more storage and a cleaner media setup</td>
+                </tr>
+
+                <tr data-generation="360">
+                  <td>Xbox 360 Slim</td>
+                  <td>Refined Xbox 360 design</td>
+                  <td>Smaller body, quieter system, and built in Wi-Fi</td>
+                  <td>Still limited by older generation hardware</td>
+                  <td>The best overall Xbox 360 experience</td>
+                </tr>
+
+                <tr data-generation="one">
+                  <td>Xbox One</td>
+                  <td>Games, media, apps, and Kinect</td>
+                  <td>Blu-ray support, app support, and entertainment features</td>
+                  <td>Launch message focused too much on television and not enough on games</td>
+                  <td>Players who wanted gaming and media in one system</td>
+                </tr>
+
+                <tr data-generation="one">
+                  <td>Xbox One S</td>
+                  <td>Smaller and cleaner Xbox One design</td>
+                  <td>Smaller body, improved design, and 4K video playback</td>
+                  <td>Not a major power jump for games</td>
+                  <td>Casual gaming, streaming, and affordable Xbox One play</td>
+                </tr>
+
+                <tr data-generation="one">
+                  <td>Xbox One X</td>
+                  <td>High power Xbox One gaming</td>
+                  <td>Stronger graphics and better 4K support</td>
+                  <td>Higher price than other Xbox One models</td>
+                  <td>Players who wanted the strongest Xbox One version</td>
+                </tr>
+
+                <tr data-generation="series">
+                  <td>Xbox Series S</td>
+                  <td>Affordable modern Xbox gaming</td>
+                  <td>Fast loading, small size, and digital game access</td>
+                  <td>No disc drive and less power than Series X</td>
+                  <td>Game Pass users and digital game libraries</td>
+                </tr>
+
+                <tr data-generation="series">
+                  <td>Xbox Series X</td>
+                  <td>High performance modern Xbox gaming</td>
+                  <td>4K gaming, fast SSD storage, stronger hardware, and disc support</td>
+                  <td>Higher price and larger console size</td>
+                  <td>Players who want the strongest current Xbox hardware</td>
+                </tr>
+
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Supporting information section -->
+  <aside>
+    <div class="container">
+
+      <!-- Xbox overview widget -->
+      <article class="widget">
+        <header>
+          <h2>Xbox Overview</h2>
+        </header>
+
+        <p>
+          Xbox helped shape online multiplayer, achievements, party chat, digital libraries, subscriptions, and backward compatibility. The brand changed from a single console into a connected gaming platform that reaches console, PC, and cloud gaming.
+        </p>
+
+        <footer>Gaming History Overview</footer>
+      </article>
+
+      <!-- Timeline summary widget -->
+      <article class="widget overview">
+        <header>
+          <h2>Console Timeline</h2>
+        </header>
+
+        <table>
+          <caption>Major Xbox console generations</caption>
+
+          <tbody>
+            <tr>
+              <td>Original Xbox</td>
+              <td>2001</td>
+            </tr>
+
+            <tr>
+              <td>Xbox 360</td>
+              <td>2005</td>
+            </tr>
+
+            <tr>
+              <td>Xbox One</td>
+              <td>2013</td>
+            </tr>
+
+            <tr>
+              <td>Xbox Series X and Series S</td>
+              <td>2020</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <footer>Xbox Console Timeline</footer>
+      </article>
+
+    </div>
+  </aside>
+
+  <!-- Site footer -->
+  <footer id="colophon">
+
+    <p>
+      This website was created as a student project for educational purposes.
+      Microsoft and Xbox are not affiliated with or endorsing this work.
+    </p>
+
+    <p>
+      Images are used for non-commercial educational purposes. Some visual assets were resized, reformatted, or touched up with AI assisted editing.
+    </p>
+
+    <p>
+      <a href="mailto:ccjohnson2@ualr.edu">Report a Problem</a> |
+      <a href="https://www.xbox.com" target="_blank" rel="noopener">Official Xbox Website</a> |
+      <a href="#home">Back to Top</a>
+    </p>
+
+  </footer>
+
+  <!-- Shared JavaScript for theme toggle and comparison table -->
+  <script src="assets/js/scripts.js"></script>
+
+</body>
+
+</html>
